@@ -1,0 +1,126 @@
+@font-face {
+    font-family: Abdoullah Ashgar EL-kharef;
+    src: url('./../fonts/Abdoullah\ Ashgar\ EL-kharef.ttf');
+    font-family: Mulish;
+    src: url('./../fonts/Mulish-VariableFont_wght.ttf');
+}
+
+/*Desktop Screen*/
+body {
+    background: url(./../assets/gradientbackground.png) no-repeat center center fixed, #ffffff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 100px;
+    gap: 10px;
+    position: relative;
+}
+
+.img-style {
+    width: 450px;
+    height: 456px;
+    border-radius: 10px;
+}
+
+.success-card {
+    display: flex;
+    flex-direction: row;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    gap: 60px;
+    background: rgba(245, 247, 255, 0.85);
+    border-radius: 10px;
+}
+
+.success-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.success-section p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #1F1249;
+    font-family: 'Mulish';
+    text-decoration-line: underline;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.success-section h1 {
+    font-size: 42px;
+    line-height: 120%;
+    align-items: center;
+    text-transform: capitalize;
+    color: #2D2D2D;
+    font-family: 'Abdoullah Ashgar EL-kharef';
+    margin: 0;
+}
+
+
+/*Mobile Screen*/
+@media (min-width: 320px) and (max-width: 425px) {
+
+
+    body {
+        background: rgba(245, 247, 255, 0.85);
+        border-radius: 10px;
+        flex-direction: column;
+        order: 0;
+        align-self: stretch;
+        margin: 0;
+        padding: 40px 0px;
+    }
+    
+    .img-style {
+        width: 322px;
+        height: 315px;
+        border-radius: 10px;
+    }
+    
+    .success-card {
+        flex-direction: column;
+    }
+    
+    .success-section p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: #1F1249;
+        font-family: 'Mulish';
+        text-align: center;
+        align-items: center;
+    }
+    
+    .success-section h1 {
+        padding: 40px 0px;
+        font-size: 32px;
+        line-height: 120%;
+        align-items: center;
+        text-transform: capitalize;
+        color: #2D2D2D;
+        font-family: 'Abdoullah Ashgar EL-kharef';
+        text-align: center;
+    }
+
+}

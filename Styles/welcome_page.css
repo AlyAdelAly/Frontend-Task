@@ -1,0 +1,170 @@
+@font-face {
+    font-family: Abdoullah Ashgar EL-kharef;
+    src: url('./../fonts/Abdoullah\ Ashgar\ EL-kharef.ttf');
+    font-family: Mulish;
+    src: url('./../fonts/Mulish-VariableFont_wght.ttf');
+}
+
+/*Desktop Screen*/
+body {
+    background: url(./../assets/gradientbackground.png) no-repeat center center fixed, #ffffff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 100px;
+    gap: 10px;
+    position: relative;
+}
+
+#hidden_part {
+    display: none;
+}
+
+.img-style {
+    width: 450px;
+    height: 315px;
+    border-radius: 10px;
+}
+
+.welcome-card {
+    display: flex;
+    flex-direction: row;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    gap: 60px;
+    background: rgba(245, 247, 255, 0.85);
+    border-radius: 10px;
+}
+
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.welcome-section p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 160%;
+    color: #1F1249;
+    font-family: 'Mulish';
+}
+
+.welcome-word {
+    font-size: 56px;
+    line-height: 120%;
+    align-items: center;
+    text-transform: capitalize;
+    color: #2D2D2D;
+    font-family: 'AbdoullahAshgarEL-kharefRegular';
+    margin: 0;
+}
+
+.button-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    gap: 20px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    font-weight: 400;
+    font-family: 'Mulish';
+    font-size: 16px;
+    line-height: 140%;
+    align-items: center;
+    text-align: center;
+}
+
+.get-started-btn {
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    gap: 12px;
+    width: 450px;
+    height: 60px;
+    color: #FFFFFF;
+    background: linear-gradient(113.87deg, #2663DF 14.81%, #758FF0 88.76%);
+    box-shadow: 0px 6px 18px #9CADF2;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/*Mobile Screen*/
+@media (min-width: 320px) and (max-width: 425px) {
+
+    body {
+        background: rgba(245, 247, 255, 0.85);
+        border-radius: 10px;
+        flex-direction: column;
+        order: 0;
+        align-self: stretch;
+        margin: 0;
+        padding: 40px 0px;
+    }
+
+    #hidden_part {
+        display: block;
+    }
+
+    .img-style {
+        width: 315px;
+        height: 315px;
+        border-radius: 10px;
+    }
+
+    .welcome-card {
+        flex-direction: column;
+    }
+
+    .welcome-section p {
+        text-align: center;
+        align-items: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: #1F1249;
+        font-family: 'Mulish';
+    }
+
+    .welcome-word {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 120%;
+        color: #2D2D2D;
+        font-family: 'Abdoullah Ashgar EL-kharef';
+        text-align: center;
+    }
+
+    .get-started-btn {
+        margin: 30px 0px;
+        justify-content: center;
+        align-items: center;
+        color: #FFFFFF;
+        width: 325px;
+        background: linear-gradient(113.87deg, #2663DF 14.81%, #758FF0 88.76%);
+        box-shadow: 0px 6px 18px #9CADF2;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+}
