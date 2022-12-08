@@ -16,8 +16,12 @@ if (form) {
     
         var formData = new FormData(form);
         
-        etch('https://goldblv.com/api/hiring/tasks/register', {
+        fetch('https://goldblv.com/api/hiring/tasks/register', {
             method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
             body: formData,
         })
         .then(res => res.json())
