@@ -6,17 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../Styles/register_page.css">
+    <link rel="stylesheet" href="./../Styles/style.css">
     <script defer src="./../js/validation_form.js"></script>
     <title>Register Page</title>
 </head>
 
 <body>
-    <div class="register-card">
+    <div class="main-card">
         <img class="img-style" src="./../assets/register-page.jfif" alt="register-page-image" />
-        <div class="register-section">
+        <div class="main-section">
             <h1>Create Account</h1>
             <p>Go ahead and sign up, let everyone<br> know how awesome you are!</p>
-            <form onSubmit="return redirect()" id="form" action="https://goldblv.com/api/hiring/tasks/register" method="post">
+            <form  id="form" action="/" method="post">
                 <div class="input-control">
                     <input id="username" name="username" type="text" placeholder="Username">
                     <svg width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +45,7 @@
                     <div class="error"></div>
                 </div>
                 <div class="input-control">
-                    <input id="password" name="password" type="password" placeholder="Password">
+                    <input id="password" name="password" type="password"  placeholder="Password">
                     <svg width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M10 10C9.48223 10 9.0625 10.4197 9.0625 10.9375C9.0625 11.4553 9.48223 11.875 10 11.875C10.5178 11.875 10.9375 11.4553 10.9375 10.9375C10.9375 10.4197 10.5178 10 10 10ZM7.8125 10.9375C7.8125 9.72938 8.79188 8.75 10 8.75C11.2081 8.75 12.1875 9.72938 12.1875 10.9375C12.1875 12.1456 11.2081 13.125 10 13.125C8.79188 13.125 7.8125 12.1456 7.8125 10.9375Z"
@@ -63,7 +64,7 @@
                     <div class="error"></div>
                 </div>
                 <div class="input-control">
-                    <input id="confirm password" name="confirm password" type="password" placeholder="Confirm Password">
+                    <input id="confirm password" name="confirm password" type="password"  placeholder="Confirm Password">
                     <svg width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M10 10C9.48223 10 9.0625 10.4197 9.0625 10.9375C9.0625 11.4553 9.48223 11.875 10 11.875C10.5178 11.875 10.9375 11.4553 10.9375 10.9375C10.9375 10.4197 10.5178 10 10 10ZM7.8125 10.9375C7.8125 9.72938 8.79188 8.75 10 8.75C11.2081 8.75 12.1875 9.72938 12.1875 10.9375C12.1875 12.1456 11.2081 13.125 10 13.125C8.79188 13.125 7.8125 12.1456 7.8125 10.9375Z"
@@ -81,7 +82,7 @@
                     </svg>
                     <div class="error"></div>
                 </div>
-                    <button class="form-btn" type="submit" onClick="saveEmailToLocalStorage()">Create Account</button>
+                    <button class="form-btn" type="submit">Create Account</button>
             </form>
         </div>
     </div>

@@ -6,63 +6,14 @@
 }
 
 /*Desktop Screen*/
-body {
-    background: url(./../assets/gradientbackground.png) no-repeat center center fixed, #ffffff;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 200px 100px;
-    gap: 10px;
-    position: relative;
-}
-
 .img-style {
-    width: 450px;
+    width: 400px;
     height: 536px;
     border-radius: 10px;
 }
 
-.register-card {
-    display: flex;
-    flex-direction: row;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    justify-content: center;
-    align-items: center;
-    padding: 60px;
-    gap: 60px;
-    background: rgba(245, 247, 255, 0.85);
-    border-radius: 10px;
-}
-
-.register-section p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 160%;
-    color: #1F1249;
-    font-family: 'Mulish';
-}
-
-.register-section h1 {
-    font-size: 42px;
-    line-height: 120%;
-    align-items: center;
-    text-transform: capitalize;
-    color: #2D2D2D;
-    font-family: 'AbdoullahAshgarEL-kharefRegular';
-    margin: 0;
-}
-
 #form button {
     padding: 10px;
-    margin-top: 10px;
     width: 100%;
     border: none;
     border-radius: 10px;
@@ -137,16 +88,6 @@ body {
 
 /*Mobile Screen*/
 @media (min-width: 320px) and (max-width: 425px) {
-
-    body {
-        background: rgba(245, 247, 255, 0.85);
-        border-radius: 10px;
-        flex-direction: column;
-        order: 0;
-        align-self: stretch;
-        margin: 0;
-        padding: 40px 0px;
-    }
     
     .img-style {
         width: 315px;
@@ -154,41 +95,8 @@ body {
         border-radius: 10px;
     }
     
-    .register-card {
-        flex-direction: column;
-    }
-    
-    .register-section p {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 160%;
-        color: #1F1249;
-        font-family: 'Mulish';
+    .main-section h1 {
         text-align: center;
-        align-items: center;
-    }
-    
-    .register-section h1 {
-        font-size: 32px;
-        line-height: 120%;
-        align-items: center;
-        text-transform: capitalize;
-        color: #2D2D2D;
-        font-family: 'AbdoullahAshgarEL-kharefRegular';
-        text-align: center;
-    }
-    
-    #form button {
-        padding: 10px;
-        margin-top: 10px;
-        width: 100%;
-        border: none;
-        border-radius: 10px;
-        font-family: 'Mulish';
-        font-style: normal;
-        font-size: 16px;
-        line-height: 140%;
     }
     
     .input-control svg {
@@ -199,50 +107,20 @@ body {
     }
     
     .input-control input {
-        background: #ffffff;
-        color: #3B3B3B;
-        align-items: center;
-        align-content: center;
         width: 315px;
-        box-sizing: border-box;
-        border: 1px solid #DBE3FF;
-        border-radius: 10px;
-        font-family: 'Mulish';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 140%;
-    }
-    
-    .input-control input:focus {
-        outline: 0;
-    }
-    
-    .input-control.success input {
-        border-color: #0ab169;
-    }
-    
-    .input-control.error input {
-        border-color: #e22c51;
-    }
-    
-    .input-control .error {
-        color: #ff3860;
-        font-size: 12px;
-        height: 15px;
     }
     
     .form-btn {
-        justify-content: center;
-        align-items: center;
         width: 315px;
-        height: 60px;
-        color: #ffffff;
-        background: linear-gradient(113.87deg, #2663DF 14.81%, #758FF0 88.76%);
-        box-shadow: 0px 6px 18px #9CADF2;
-        border-radius: 10px;
-        cursor: pointer;
-        font-weight: 700;
     }
 
+}
+/* Laptop 1024px*/
+@media screen and (max-width:1200px) {
+
+.register-card {
+    padding: 30px;
+    gap: 30px;
+}
+    
 }

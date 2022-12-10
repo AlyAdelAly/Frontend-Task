@@ -6,25 +6,46 @@
 }
 
 /*Desktop Screen*/
-#hidden_part {
-    display: none;
+body {
+    background: url(./../assets/gradientbackground.png) no-repeat center center fixed, #ffffff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 100px;
+    gap: 10px;
+    position: relative;
 }
 
-.img-style {
-    width: 400px;
-    height: 315px;
+
+.main-card {
+    display: flex;
+    flex-direction: row;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    gap: 60px;
+    background: rgba(245, 247, 255, 0.85);
     border-radius: 10px;
 }
 
-.welcome-word {
-    font-size: 56px;
-    line-height: 120%;
-    align-items: center;
-    text-transform: capitalize;
-    color: #2D2D2D;
-    font-family: 'AbdoullahAshgarEL-kharefRegular';
-    margin: 0;
+
+.main-section p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 160%;
+    color: #1F1249;
+    font-family: 'Mulish';
 }
+
 
 .button-section {
     display: flex;
@@ -62,24 +83,29 @@
 /*Mobile Screen*/
 @media (min-width: 320px) and (max-width: 425px) {
 
-    #hidden_part {
-        display: block;
-    }
-
-    .img-style {
-        width: 315px;
-        height: 315px;
+    body {
+        background: rgba(245, 247, 255, 0.85);
         border-radius: 10px;
+        flex-direction: column;
+        order: 0;
+        align-self: stretch;
+        margin: 0;
+        padding: 40px 0px;
     }
 
-    .welcome-word {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 42px;
-        line-height: 120%;
-        color: #2D2D2D;
-        font-family: 'Abdoullah Ashgar EL-kharef';
+    .main-card {
+        flex-direction: column;
+    }
+
+    .main-section p {
         text-align: center;
+        align-items: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: #1F1249;
+        font-family: 'Mulish';
     }
 
     .get-started-btn {
@@ -96,6 +122,7 @@
     }
 
 }
+
 /* Laptop 1024px*/
 @media screen and (max-width:1200px) {
 
