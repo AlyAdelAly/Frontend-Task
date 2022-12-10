@@ -4,32 +4,69 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const confirm_password = document.getElementById('confirm password');
 
+let InputForms = {
+    'username': username,
+    'email': email,
+    'password': password,
+    'confirm_password': confirm_password
+}
+
 
 if (form) {
     form.addEventListener('submit', e => {
         e.preventDefault();
 
-        validateInputs();
+        validateInputs() && formData()
     });
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-    
-        var formData = new FormData(form);
-        
-        fetch('https://goldblv.com/api/hiring/tasks/register', {
-            method: 'POST',
+}
+
+const formData = async () => {
+    const dataInputs = {
+        username: username.value,
+        email: email.value,
+        password: password.value,
+        password_confirmation: confirm_password.value
+    }
+
+    try {
+        let data = await fetch("https://goldblv.com/api/hiring/tasks/register", {
+            method: "POST",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: formData,
+            body: JSON.stringify(dataInputs)
         })
-        .then(res => res.json())
-        .then(data => console.log(data))
-        .catch(err => console.log(err))
-    });
+
+        let result = await data.json()
+        if (result && result.errors && Object.keys(result.errors).length) {
+            showErrors(result.errors)
+         }else {
+            saveEmailToLocalStorage();
+            window.location.href = "succeed_page.html";
+        }
+    } catch (err) {
+        console.log(err)
+    }
+
 }
 
+const showErrors = (errors) => {
+    Object.keys(errors).forEach((inputName) => {
+        errors[inputName].forEach((err) => {
+            errorDisplay = InputForms[inputName].closest(".input-control").querySelector(".error");
+            errorDisplay.innerText = err;
+        })
+    })
+}
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.remove('error');
+};
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;
@@ -38,15 +75,6 @@ const setError = (element, message) => {
     errorDisplay.innerText = message;
     inputControl.classList.add('error');
     inputControl.classList.remove('success')
-};
-
-const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
 };
 
 const isValidEmail = email => {
@@ -124,10 +152,4 @@ const validateInputs = () => {
         setSuccess(confirm_password);
     }
     return true;
-};
-
-const redirect = () => {
-    if (validateInputs()) {
-        window.location.href = "succeed_page.html";
-    }
 };
